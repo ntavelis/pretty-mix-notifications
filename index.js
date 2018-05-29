@@ -2,20 +2,32 @@
 
 module.exports = class Notifications {
 
+    /**
+     * Initialize with our own default configuration
+     */
     constructor() {
         this.defaultConfig = {
             title: "Webpack build",
-            successIcon: path.resolve("./pretty-mix-notifications/icons/success.png"),
-            warningIcon: path.resolve("./pretty-mix-notifications/icons/warning.png"),
-            failureIcon: path.resolve("./pretty-mix-notifications/icons/failure.png"),
-            compileIcon: path.resolve("./pretty-mix-notifications/icons/compile.png"),
+
+            successIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/success.png'),
+            warningIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/warning.png'),
+            failureIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/failure.png'),
+            compileIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/compile.png'),
         }
     }
 
+    /**
+     * Add custom config to the 'webpack-build-notifier'
+     * @param config
+     */
     register(config){
         this.config = config;
     }
 
+    /**
+     * Remove the laravel mix notifictaion plugin, so that we can use our own
+     * @param config
+     */
     webpackConfig(config) {
         config.plugins.forEach((value, index) => {
             if (value.options !== undefined) {
@@ -27,7 +39,8 @@ module.exports = class Notifications {
     }
 
     /**
-     * webpack plugins to be appended to the master config.
+     * Appended our webpack notification plugin to the master config.
+     * If the user haven't disabled the mix notifications
      */
     webpackPlugins() {
         if (Mix.isUsing('notifications')) {
