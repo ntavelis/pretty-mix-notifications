@@ -1,0 +1,29 @@
+{
+  "name": "pretty-mix-notifications",
+  "version": "0.1.0",
+  "description": "Make your laravel mix notifications pretty.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntavelis/pretty-mix-notifications.git"
+  },
+  "keywords": [
+    "laravel",
+    "laravel mix",
+    "webpack",
+    "pretty"
+  ],
+  "author": "Ntavelis Athanasios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ntavelis/pretty-mix-notifications/issues"
+  },
+  "homepage": "https://github.com/ntavelis/pretty-mix-notifications#readme",
+  "dependencies": {
+    "laravel-mix": "^2.1.0",
+    "webpack-build-notifier": "^0.1.25"
+  }
+}
