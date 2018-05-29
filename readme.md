@@ -40,7 +40,7 @@ Take 2 seconds to make your laravel-mix notifications pretty.
 
 If you want to override the default configuration you can pass an object with your config to the prettyNotifications function.
 
-Below we override the default successImage and the default title.
+Below we override the default **successIcon** and the default **title**.
 
  ```javascript
      mix.js('resources/assets/js/app.js', 'public/js')
