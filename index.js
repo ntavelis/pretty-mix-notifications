@@ -25,7 +25,7 @@ module.exports = class Notifications {
     }
 
     /**
-     * Remove the laravel mix notifictaion plugin, so that we can use our own
+     * Remove the laravel mix notification plugin, so that we can use our own
      * @param config
      */
     webpackConfig(config) {
@@ -46,7 +46,8 @@ module.exports = class Notifications {
         if (Mix.isUsing('notifications')) {
             let WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
-            return new WebpackBuildNotifierPlugin(this.config || this.defaultConfig);
+            const mergedConfig = Object.assign({}, this.defaultConfig, this.config);
+            return new WebpackBuildNotifierPlugin(mergedConfig);
         }
     }
 }
