@@ -117,3 +117,11 @@ Credit https://github.com/RoccoC/webpack-build-notifier
  
  #### onClick
  A function called when the notification is clicked. By default it activates the Terminal application.
+ 
+ ## Contributing
+ 
+ Thank you for considering contributing to the Pretty Mix Notifications.
+ 
+ ## License
+ 
+ Pretty Mix Notifications is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
