@@ -3,25 +3,11 @@
 module.exports = class Notifications {
 
     /**
-     * Initialize with our own default configuration
-     */
-    constructor() {
-        this.defaultConfig = {
-            title: "Webpack build",
-
-            successIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/success.png'),
-            warningIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/warning.png'),
-            failureIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/failure.png'),
-            compileIcon: Mix.paths.root('node_modules/pretty-mix-notifications/icons/compile.png'),
-        }
-    }
-
-    /**
      * Add custom config to the 'webpack-build-notifier'
      * @param config
      */
     register(config){
-        this.config = config;
+        this.config = config || {};
     }
 
     /**
@@ -44,10 +30,9 @@ module.exports = class Notifications {
      */
     webpackPlugins() {
         if (Mix.isUsing('notifications')) {
-            let WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+            let WebpackBuildNotifications = require('webpack-build-notifications');
 
-            const mergedConfig = Object.assign({}, this.defaultConfig, this.config);
-            return new WebpackBuildNotifierPlugin(mergedConfig);
+            return new WebpackBuildNotifications(this.config);
         }
     }
-}
+};
