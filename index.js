@@ -11,7 +11,7 @@ module.exports = class Notifications {
     }
 
     /**
-     * Remove the laravel mix notification plugin, so that we can use our own
+     * Remove the laravel mix notifications plugin, so that we can use our own
      * @param config
      */
     webpackConfig(config) {
