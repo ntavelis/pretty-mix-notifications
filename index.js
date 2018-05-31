@@ -2,11 +2,17 @@
 
 module.exports = class Notifications {
 
+    constructor() {
+        this.defaultConfig = {
+            title: 'Mix build result'
+        }
+    }
+
     /**
      * Add custom config to the 'webpack-build-notifier'
      * @param config
      */
-    register(config){
+    register(config) {
         this.config = config || {};
     }
 
@@ -32,7 +38,7 @@ module.exports = class Notifications {
         if (Mix.isUsing('notifications')) {
             let WebpackBuildNotifications = require('webpack-build-notifications');
 
-            return new WebpackBuildNotifications(this.config);
+            return new WebpackBuildNotifications(Object.assign(this.defaultConfig, this.config));
         }
     }
 };
