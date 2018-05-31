@@ -53,11 +53,10 @@ Below we override the default **successIcon** and the default **title**.
              }
          );
   ```
-  
-Here is the full list of the supported configuration.
-Credit https://github.com/RoccoC/webpack-build-notifier
 
 ## Config Options
+ 
+ Here is the full list of the supported configuration. You can also pass any valid [node-notifier](https://github.com/mikaelbr/node-notifier) option, that may not be listed here. Just keep in mind that not every options of node-notifier works in the **Windows platform**.
  
  #### title
  The notification title. Defaults to **_Webpack Build_**.
@@ -116,7 +115,26 @@ Credit https://github.com/RoccoC/webpack-build-notifier
  Note that the message will always be limited to 256 characters.
  
  #### onClick
- A function called when the notification is clicked. By default it activates the Terminal application.
+ A function to be called when the notification is clicked. By default it activates the Terminal application. (Does not work on windows)
+ 
+ The function's signature
+ ```javascript
+{
+    // other options
+    onClick: function(notifierObject, options){}
+}
+```
+ #### 
+ A function to be called when the notification closes. By default it does not do anything.
+ 
+  The function's signature
+  ```javascript
+ //Configuration options
+ {
+     // other options
+     onTimeout: function(notifierObject, options){}
+ }
+ ```
  
  ## Contributing
  
