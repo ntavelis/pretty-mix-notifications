@@ -24,6 +24,6 @@
   "homepage": "https://github.com/ntavelis/pretty-mix-notifications#readme",
   "dependencies": {
     "laravel-mix": "^2.1.0",
-    "webpack-build-notifications": "^0.1.1"
+    "webpack-build-notifications": "^0.2.0"
   }
 }
