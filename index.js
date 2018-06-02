@@ -9,7 +9,7 @@ module.exports = class Notifications {
     }
 
     /**
-     * Add custom config to the 'webpack-build-notifier'
+     * Add custom config to the 'webpack-build-notifications'
      * @param config
      */
     register(config) {
@@ -31,8 +31,8 @@ module.exports = class Notifications {
     }
 
     /**
-     * Appended our webpack notification plugin to the master config.
-     * If the user haven't disabled the mix notifications
+     * Append our webpack notifications plugin, to the master config.
+     * If the mix notifications are enabled.
      */
     webpackPlugins() {
         if (Mix.isUsing('notifications')) {
