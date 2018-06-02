@@ -2,8 +2,8 @@
 
 Take 2 seconds to make your laravel-mix notifications pretty.
 
-![success](https://user-images.githubusercontent.com/20874606/40683887-7a064b44-6398-11e8-9355-b99528b5ad19.png)
-![failure](https://user-images.githubusercontent.com/20874606/40683894-85861fe4-6398-11e8-9d98-3f85014df3c0.png)
+![success](https://user-images.githubusercontent.com/20874606/40872928-cbd4a51e-665f-11e8-992d-e496f0e5ff1d.png)
+![failure](https://user-images.githubusercontent.com/20874606/40872942-e648f9f4-665f-11e8-8966-486ef6ef4e46.png)
 
 ## Installation
 
@@ -56,10 +56,10 @@ Below we override the default **successIcon** and the default **title**.
 
 ## Config Options
  
- Here is the full list of the supported configuration. You can also pass any valid [node-notifier](https://github.com/mikaelbr/node-notifier) option, that may not be listed here. Just keep in mind that not every options of node-notifier works in the **Windows platform**.
+ Here is the full list of the supported configuration. You can also pass any valid [node-notifier](https://github.com/mikaelbr/node-notifier) option, that may not be listed here. Just keep in mind, that not every option of node-notifier works in the **Windows platform**.
  
  #### title
- The notification title. Defaults to **_Webpack Build_**.
+ The notification title. Defaults to **_Laravel-Mix build_**.
  
  #### logo
  The absolute path to the project logo to be displayed as a content image in the notification. Optional.

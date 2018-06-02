@@ -4,7 +4,7 @@ module.exports = class Notifications {
 
     constructor() {
         this.defaultConfig = {
-            title: 'Mix build result'
+            title: 'Laravel-Mix build'
         }
     }
 
