@@ -64,17 +64,23 @@ Below we override the default **successIcon** and the default **title**.
  #### logo
  The absolute path to the project logo to be displayed as a content image in the notification. Optional.
  
- #### sound
- The sound to play for notifications. Set to false to play no sound. Valid sounds are listedin the node-notifier project, [here](https://github.com/mikaelbr/node-notifier). Defaults to **_Submarine_**.
- 
  #### successSound
- The sound to play for success notifications. Defaults to the value of the *sound* configuration option. Set to false to play no sound for success notifications. Takes precedence over the *sound* configuration option.
+ The sound to play for success notifications. Defaults to the value of the **submarine** for mac OS and **Notification.Default** for windows. Set to false to play no sound for success notifications.
+ * In Mac OS successSound can be one of these: Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink. If sound is simply true, Bottle is used.
+ * In Linux OS there are no sounds.
+ * In windows you can choose any valid option described [here](http://msdn.microsoft.com/en-us/library/windows/apps/hh761492.aspx). e.g. `successSound: 'Notification.Mail'` 
  
  #### warningSound
- The sound to play for warning notifications. Defaults to the value of the *sound* configuration option. Set to false to play no sound for warning notifications. Takes precedence over the *sound* configuration option.
+ The sound to play for warning notifications. Defaults to the value of the **submarine** for mac OS and **Notification.Default** for windows. Set to false to play no sound for success notifications.
+  * In Mac OS warningSound can be one of these: Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink. If sound is simply true, Bottle is used.
+  * In Linux OS there are no sounds.
+  * In windows you can choose any valid option described [here](http://msdn.microsoft.com/en-us/library/windows/apps/hh761492.aspx). e.g. `warningSound: 'Notification.Mail'`
  
  #### failureSound
- The sound to play for failure notifications. Defaults to the value of the *sound* configuration option. Set to false to play no sound for failure notifications. Takes precedence over the *sound* configuration option.
+ The sound to play for failure notifications. Defaults to the value of the **submarine** for mac OS and **Notification.Default** for windows. Set to false to play no sound for success notifications.
+  * In Mac OS failureSound can be one of these: Basso, Blow, Bottle, Frog, Funk, Glass, Hero, Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink. If sound is simply true, Bottle is used.
+  * In Linux OS there are no sounds.
+  * In windows you can choose any valid option described [here](http://msdn.microsoft.com/en-us/library/windows/apps/hh761492.aspx). e.g. `failureSound: 'Notification.Mail'`
  
  #### suppressSuccess
  Defines when success notifications are shown. Can be one of the following values:
